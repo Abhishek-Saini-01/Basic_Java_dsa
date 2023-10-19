@@ -12,6 +12,18 @@ public class BasicSorting {
             }
         }
     }
+    public static void bubbleSortDescending(int array[]){
+        int temp, n=array.length;
+        for(int i=0; i<n; i++) {
+            for(int j=i+1; j<n; j++) {
+                if(array[i]<array[j]){
+                    temp=array[i];
+                    array[i]=array[j];
+                    array[j]=temp;
+                }
+            }
+        }
+    }
 
     public static void insertionSort(int array[]){
         for(int i=0; i<array.length; i++) {
@@ -87,7 +99,8 @@ public class BasicSorting {
 
         // Arrays.sort(array);// inbuilt class or function
 
-        countingSort(array);
+        // countingSort(array);
+        bubbleSortDescending(array);
 
         printArray(array);
     }

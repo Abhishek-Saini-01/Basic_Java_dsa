@@ -37,12 +37,26 @@ public class Arrays2 {
         }
         return maxProfit;
     }
+
+    public static boolean checkNumOccurence(int nums[]){
+        for(int i=0; i<nums.length; i++){
+            int num = nums[i];
+            for(int j=i+1; j<nums.length; j++){
+                if(num == nums[j]){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
     public static void main(String[] args) {
         // int height[] = {4,2,0,6,3,2,5};
         // System.out.println("Trapped Water: " + trappedRainwater(height));
 
-        int prices[] = {7,1,5,3,6,4};
-        System.out.println("Max Profit : " + buyAndSellStock(prices));
+        // int prices[] = {7,1,5,3,6,4};
+        // System.out.println("Max Profit : " + buyAndSellStock(prices));
 
+        int nums[] = {1,3,4,4,5};
+        System.out.println(checkNumOccurence(nums));
     }
 }
